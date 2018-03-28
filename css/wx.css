@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+html{
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing:antialiased;
+}
+body{
+    text-align: center;
+    
+    width: 100%;
+    font-size: 1.2rem;
+    font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,sans-serif;
+    -webkit-text-size-adjust: none;
+}
+/*最外容器*/
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;/*高度占满*/
+    background: #3b3a3a;
+}
+/*内容*/
+.page .content{
+    flex:1;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 80vh;
+    background: #f3f3f3;
+}
+.content{
+    -webkit-overflow-scrolling : touch;
+    -webkit-scrollbar:none;  
+}
+.header{
+   /* display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ 
+    display: -moz-box;  Firefox 17- 
+    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 
+    display: -moz-flex; /* Firefox 18+ 
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+    height: 7vh;
+    
+
+}
+.header *{
+    color: #fff;
+    
+}
+/*底部*/
+.footer{
+    overflow: hidden;
+    background: #eeeaea;
+    height: 8vh;
+    line-height: 8vh;
+}
+.foot-nav{
+        display: flex;
+       
+        
+}
+.foot-nav *{
+    
+    flex:1;
+    
+}
+/*头部信息数量*/
+.h-left{
+    font-size: 1.6rem;
+    width: 7rem;
+    line-height: 7vh;
+    letter-spacing: 0.2rem;
+   flex-grow: 1;
+   text-align: left;
+   margin-left: 2rem;
+
+}
+.menu,.search{
+    width: 15vw;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+header img{
+    flex-grow:0;   
+    height:1.5rem;
+    width: 1.5rem;
+}
+
+
+/*新闻、聊天信息*/
+.hot{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    
+}
+
+/*头像*/
+.Avatar{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    flex:none;
+    background: cadetblue;
+    margin: 0.5rem 0.7rem;
+}
+.Avatar img{
+    height: 100%;
+    width: 100%;    
+}
+/*聊天摘要*/
+.chatting{
+    flex-grow: 4;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+.title{
+    font-size:1.5rem;
+    width: 100%;
+   text-align: left;
+   font-weight: bold;
+    display:flex;
+    align-items:center;
+}
+.hot p{
+    height: 1.2rem; 
+    width: 65vw;
+    color: rgb(185, 179, 179);
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+time{
+   font:1rem;
+   line-height: 3vh;
+   color: rgb(185, 179, 179);
+   flex-grow: 1;
+   width: 20vw;
+   margin-top: 1vh;
+}
+.wx{
+    display:flex;
+    flex-direction: column;
+   align-items: center;
+   
+}
+.p-font{
+    margin-top: -4.5rem;
+}
+.foot-nav img{
+    margin-top: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    flex:0;
+    
+}
+
+/*通讯录页*/
+/*功能列表*/
+#address{
+    display: none;
+}
+.add-list{
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0 0 4vw;
+    align-items: center;
+    width: 90vw;
+}
+.f-title{
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(0, 183, 207);
+    
+}
+hr{
+    color: #ccc;
+    width: 90vw;
+    margin-left: 4vw;
+    
+}
+.f-text{
+    height: 4rem;
+    line-height: 4rem;
+    margin-left: 1.2rem;
+    font-family:"Helvetica Neue", Arial, "Hiragino Sans GB",
+     "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+     font-size: 1.4rem;
+}
+/*好友列表*/
+.network-friend{
+    display: flex;
+    flex-direction: row;
+}
+.acronym-box{
+    background: #ccc;
+    width: 100%;
+}
+.acronym{
+    text-align: left;
+    margin-left: 4vw;
+}
+/*好友信息*/
+.friend-list{
+    display: flex;
+}
+.f-avatar{
+    height: 3rem;
+    width: 3rem;
+    background-color:rgb(0,183,207);
+    margin: 0.5rem 0 0 4vw;
+    
+
+}
+.f-name{
+    height: 4rem;
+    line-height: 4rem;
+    margin-left: 1.2rem;
+    font-family:"Helvetica Neue", Arial, "Hiragino Sans GB",
+     "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+     font-size: 1.4rem;
+}
+
+/*发现页面*/
+
+.found{
+    
+    display: none;
+    flex-direction: column;
+
+}
+.find {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+}
+.img {
+    width: 2rem;
+    height: 2rem;
+    background: lightblue;
+}
+.img img{
+    width: 2rem;
+    height: 2rem;
+}
+
+/*我的*/
+#me {
+    display: none;
+}
+.my-account {
+    height: 10vh;
+    text-align: 10vh;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    
+}
+.my-img {
+    height: 7vh;
+    width: 12vw;
+    background-color: #04f;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+.my-font {
+    text-align: left;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+.my-account .my-font p {
+    color: #a7a6a6;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.row {
+    height: 4rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.in-row {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    border-bottom: 1px solid #ccc;
+}
+.no-bor {
+    border: 0;
+}
+.mar-row {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.top-row {
+    margin-top: 1.5rem;
+}
+.bot-row {
+    margin-bottom: 1.5rem;
+}
+.font {
+    margin-left: 1.5rem;
+    font-family: "Helvetica Neue", Arial, "Hiragino Sans GB",
+    "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+    font-size: 1.4rem;
+    
+}
+.bor-b {
+    border-bottom: 1px solid #a7a6a6;
+}
+/*.back-row {
+    height: 1.5rem;
+    text-align: left;
+    color: #7b7b7b;
+    background-color: #f3f3f3;
+}*/  /*间隔横条，多加了无意义标签*/
+
+.qr-code {
+   margin-right: 10%;
+   width: 100%;
+   text-align: right;
+}
+.qr-code img {
+    height: 3vh;
+    width: 5.5vw;
+}
+
+/*下拉菜单dropdown*/
+.list {
+    width: 45vw;
+    position: absolute;
+    box-shadow: 0.1rem -0.1rem 1rem 0.1rem #000;
+    left: 52vw;
+    top: 7vh;
+    display: none;
+
+}
+.list li {
+    border-bottom: 1px solid #000;
+    display: flex;
+    background-color: #3b3a3a;
+    color: #fff;
+    align-items: center;
+    
+}
+.list img {
+    height: 1.5rem;
+    width: 1.5rem;
+    flex-shrink: 0;
+    padding: 0.6rem;
+    
+}
+/*遮罩层*/
+.shade {
+    display: none;
+}
+
+#shade {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    opacity: 0; 
+    filter: Alpha(opacity=0);/*IE8以及更早版本*/
+}
+ul li:hover {
+    background-color: #000;
+}
